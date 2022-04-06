@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Plantin';
+    src: url('../fonts/PlantinStd.eot');
+    src:
+        url('../fonts/PlantinStd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlantinStd.woff2') format('woff2'),
+        url('../fonts/PlantinStd.woff') format('woff'),
+        url('../fonts/PlantinStd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FF Mark Pro';
+    src: url('../fonts/FFMarkPro-Book.eot');
+    src:
+        url('../fonts/FFMarkPro-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FFMarkPro-Book.woff2') format('woff2'),
+        url('../fonts/FFMarkPro-Book.woff') format('woff'),
+        url('../fonts/FFMarkPro-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FF Mark Pro';
+    src: url('../fonts/FFMarkPro-Medium.eot');
+    src:
+        url('../fonts/FFMarkPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FFMarkPro-Medium.woff2') format('woff2'),
+        url('../fonts/FFMarkPro-Medium.woff') format('woff'),
+        url('../fonts/FFMarkPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FF Mark Pro';
+    src: url('../fonts/FFMarkPro-Bold.eot');
+    src:
+        url('../fonts/FFMarkPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FFMarkPro-Bold.woff2') format('woff2'),
+        url('../fonts/FFMarkPro-Bold.woff') format('woff'),
+        url('../fonts/FFMarkPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

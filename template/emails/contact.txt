@@ -1,0 +1,7 @@
+Tipo: {{ contact.get_type_display }}
+Nombre: {{ contact.name }}
+Email: {{ contact.email }}
+Teléfono: {{ contact.phone }}
+Fecha: {{ contact.date|date:'DATETIME_FORMAT' }}
+
+{{ contact.message }}

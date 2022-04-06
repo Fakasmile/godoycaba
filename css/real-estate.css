@@ -1,0 +1,154 @@
+.real-estate {
+    & .image-01 {
+        background-image: url('../images/real-estate-01.jpg');
+    }
+
+    & .page-intro .title {
+        font-family: 'FF Mark Pro', sans-serif;
+        font-size: 2.4rem;
+        line-height: 1em;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 20rem;
+            height: 1px;
+            margin: 1rem auto 2rem;
+            background: #fff;
+        }
+    }
+
+    & .item {
+        position: relative;
+        height: 100vh;
+
+        & .image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &.image-02 {
+                background-image: url('../images/real-estate-02.jpg');
+
+                @media (--mobile) { background-position: right center; }
+            }
+
+            &.image-03 {
+                background-image: url('../images/real-estate-03.jpg');
+            }
+
+            &.image-04 {
+                background-image: url('../images/real-estate-04.jpg');
+
+                @media (--mobile) { background-position: left center; }
+            }
+        }
+
+        & .text {
+            position: absolute;
+            width: 100%;
+            padding: 5rem var(--padding-mobile);
+            text-align: center;
+            background: var(--gray-light);
+            color: var(--gray);
+
+            & p {
+                font-family: 'Plantin', serif;
+                font-size: 1.6rem;
+                line-height: 1.2em;
+            }
+
+            & .title {
+                margin-bottom: 2rem;
+                font-family: 'FF Mark Pro', sans-serif;
+                font-size: 2.4rem;
+                line-height: 1.2em;
+                letter-spacing: 0.1em;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                transform: translateY(100%);
+                background: url('../images/diagonal-gray-top.png') no-repeat;
+                background-size: 100% 100%;
+
+                @media (--mobile) {
+                    height: 50px;
+                }
+
+                @media (--desktop) {
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+    & .types {
+        @apply --container;
+
+        margin-bottom: 10rem;
+
+        & .title {
+            margin-bottom: 5rem;
+            font-family: 'FF Mark Pro', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 1em;
+            text-align: center;
+        }
+
+        & ul {
+            width: 100%;
+            max-width: 80rem;
+            margin: 0 auto;
+            border: 20px solid #fff;
+            display: flex;
+            flex-wrap: wrap;
+
+            @media (--mobile) {
+                flex-direction: column;
+            }
+        }
+
+        & li {
+            flex-basis: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 22rem;
+            padding: 2rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media (--mobile) {
+                flex-basis: 22rem;
+            }
+
+            &:nth-child(1) { background-image: url('../images/real-estate-type-01.jpg'); }
+            &:nth-child(2) { background-image: url('../images/real-estate-type-02.jpg'); }
+            &:nth-child(3) { background-image: url('../images/real-estate-type-03.jpg'); }
+            &:nth-child(4) { background-image: url('../images/real-estate-type-04.jpg'); }
+
+            & div {
+                display: inline-block;
+                padding: 1rem 2rem;
+                font-family: 'FF Mark Pro', sans-serif;
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 1em;
+                color: var(--gray);
+                background: #fff;
+            }
+        }
+    }
+}

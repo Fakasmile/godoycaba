@@ -1,0 +1,126 @@
+:root {
+    @media (--mobile) {
+        font-size: 12px;
+    }
+
+    @media (--desktop-sm) {
+        font-size: 9px;
+    }
+
+    @media (--desktop-md) {
+        font-size: 10px;
+    }
+
+    @media (--desktop-lg) {
+        font-size: 12px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+
+    &:focus {
+        outline: none;
+    }
+}
+a.fab.fa-whatsapp {
+    position: fixed!important;
+    bottom: 144px;
+    background: #1af18e;
+    font-size: 41px;
+    padding: 13px;   
+	border-radius: 50px;right: 26px;
+}
+.fab {
+padding: 20px;
+font-size: 30px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 50%;
+}
+
+.fab:hover {
+opacity: 0.7;
+}
+
+.fa-whatsapp {
+background: #45bbff;
+color: white;
+}
+html,
+body {
+    font-family: 'FF Mark Pro', sans-serif;
+    line-height: 1.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--hover-transition);
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+ul {
+    list-style: none;
+}
+
+.mobile-no-brs {
+    @media (--mobile) {
+        & br {
+            display: none;
+        }
+    }
+}
+
+.for-seo {
+    display: none;
+}
+
+.hide-mobile {
+    @media (--mobile) {
+        display: none;
+    }
+}
+
+.arrow-down {
+    position: absolute;
+    z-index: 100;
+    bottom: 2rem;
+    left: 50%;
+    margin-left: -3.5rem;
+    width: 7rem;
+    height: 5rem;
+    background: resolve('../images/arrow-down-white.svg') no-repeat center;
+    background-size: 60%;
+    cursor: pointer;
+    animation: bounce 1s infinite ease-in-out-sine alternate;
+    transition: opacity var(--hover-transition);
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &.gray {
+        background-image: resolve('../images/arrow-down-gray.svg');
+    }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(1rem); }
+}

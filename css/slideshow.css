@@ -1,0 +1,39 @@
+.slideshow {
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-slide {
+    float: left;
+}
+
+.slick-list,
+.slick-track {
+    height: 100%;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 6rem;
+    width: 100%;
+    text-align: center;
+
+    & li {
+        display: inline-block;
+        margin: 0 0.5rem;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        cursor: pointer;
+
+        &.slick-active {
+            background: #fff;
+        }
+    }
+}

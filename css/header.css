@@ -1,0 +1,213 @@
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    font-family: 'FF Mark Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1em;
+
+    @media (--mobile) {
+        height: var(--header-height-mobile);
+        padding: 0 var(--padding-mobile);
+    }
+
+    @media (--desktop) {
+        height: var(--header-height-desktop);
+        padding: 0 var(--padding-desktop);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
+        transform: translateY(-100%);
+        transition: transform 300ms ease-in-out-cubic;
+    }
+
+    &.shadow::before {
+        transform: translateY(0);
+    }
+
+    &.white {
+        & .logo {
+            width: width('../images/logo-white.svg');
+            height: height('../images/logo-white.svg');
+            background-image: resolve('../images/logo-white.svg');
+        }
+
+        & a {
+            color: #fff;
+        }
+
+        & li.active::after {
+            background: #fff;
+        }
+
+        & li.outline {
+            & a {
+                border-color: #fff;
+            }
+
+            &.active a,
+            & a:hover {
+                color: var(--gray);
+                background: #fff;
+            }
+        }
+    }
+
+    &.gray {
+        & .logo {
+            width: width('../images/logo-gray.svg');
+            height: height('../images/logo-gray.svg');
+            background-image: resolve('../images/logo-gray.svg');
+        }
+
+        & a {
+            color: var(--gray);
+        }
+
+        & li.active::after {
+            background: var(--gray);
+        }
+
+        & li.outline {
+            & a {
+                border-color: var(--gray);
+            }
+
+            &.active a,
+            & a:hover {
+                color: #fff;
+                background: var(--gray);
+            }
+        }
+    }
+
+    & .logo {
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: opacity var(--hover-transition);
+
+        @media (--mobile) {
+            transform: scale(0.7);
+        }
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        & a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        & span {
+            display: none;
+        }
+    }
+
+    & a:hover {
+        opacity: 0.6;
+    }
+
+    & nav {
+        position: relative;
+
+        @media (--desktop) {
+            & a {
+                display: inline-block;
+                padding: 0.5rem;
+            }
+
+            & li {
+                display: inline-block;
+
+                & + li {
+                    margin-left: 2rem;
+                }
+            }
+
+            & li.active:not(.outline)::after {
+                content: '';
+                display: block;
+                width: 2rem;
+                height: 1px;
+                margin: 3px 0 0 0.55rem;
+            }
+
+            & li.outline {
+                & a {
+                    border: 1px solid;
+                }
+
+                &.active a,
+                & a:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @media (--mobile) {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: var(--header-height-mobile);
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            overflow: auto;
+            transform: translateX(100%);
+
+            &.visible {
+                transform: translateX(0);
+            }
+
+            &.animate {
+                transition: transform 500ms ease-in-out-cubic;
+            }
+
+            & li {
+                border-bottom: 1px solid color(var(--gray) alpha(0.25));
+                text-align: center;
+            }
+
+            & a {
+                display: block;
+                padding: 1.5rem 1rem;
+                color: var(--gray) !important;
+            }
+
+            & li.active a {
+                color: var(--green) !important;
+            }
+        }
+    }
+
+    & .mobile-nav-toggle {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+
+        @media (--desktop) {
+            display: none;
+        }
+    }
+}
