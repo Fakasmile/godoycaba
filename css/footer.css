@@ -1,0 +1,72 @@
+.site-footer {
+    position: relative;
+    font-family: 'FF Mark Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    background: var(--green);
+    color: #fff;
+
+    @apply --container;
+
+    @media (--mobile) {
+        font-size: 1.1rem;
+
+        & div + div {
+            margin-top: 2rem;
+        }
+    }
+
+    @media (--desktop) {
+        display: flex;
+        justify-content: space-between;
+        padding-top: calc(var(--padding-desktop) / 2);
+
+        & div + div {
+            padding-left: 2rem;
+        }
+
+        & .address {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+            white-space: nowrap;
+        }
+    }
+
+    & a:hover {
+        opacity: 0.6;
+    }
+
+    & .facebook {
+        display: block;
+        width: width('../images/facebook.svg');
+        height: height('../images/facebook.svg');
+        background: resolve('../images/facebook.svg') no-repeat center;
+        background-size: contain;
+
+        @media (--mobile) {
+            margin-top: 2rem;
+        }
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+        background: url('../images/diagonal-green-bottom.png') no-repeat;
+        background-size: 100% 100%;
+
+        @media (--mobile) {
+            height: 50px;
+        }
+
+        @media (--desktop) {
+            height: 100px;
+        }
+    }
+}

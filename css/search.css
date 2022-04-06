@@ -1,0 +1,25 @@
+a.fab.fa-whatsapp {
+    position: fixed!important;
+    bottom: 144px;
+    background: #1af18e;
+    font-size: 41px;
+    padding: 13px;   
+	border-radius: 50px;
+	right: 26px;
+}
+.search {
+    padding: var(--header-height-desktop) var(--padding-desktop) 10rem;
+    background: url('../images/search-01.jpg') no-repeat center;
+    background-size: cover;
+
+    & .container {
+        height: 90%;
+        background: var(--gray-light);
+    }
+
+    & iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}

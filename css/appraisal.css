@@ -1,0 +1,58 @@
+.appraisal {
+    position: fixed;
+    z-index: 2000;
+    top: var(--header-height-desktop);
+    left: 0;
+    right: 0;
+    padding: calc(var(--padding-desktop) / 2) var(--padding-desktop);
+    background: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    transform: translateY(-100%) translateY(calc(var(--header-height-desktop) * -1));
+    transition: transform 400ms ease-in-out-cubic;
+    display: none;
+
+    &.visible {
+        transform: translateY(0);
+    }
+
+    & .header {
+        position: relative;
+    }
+
+    & .title {
+        font-family: 'FF Mark Pro', sans-serif;
+        font-size: 2.4rem;
+        line-height: 1em;
+        color: var(--gray);
+        text-align: center;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 20rem;
+            height: 1px;
+            margin: 1rem auto 4rem;
+            background: var(--gray);
+        }
+    }
+
+    & .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: width('../images/times.svg');
+        height: 100%;
+        background: resolve('../images/times.svg') no-repeat center;
+        background-size: contain;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    & .success-message {
+        color: var(--gray);
+        text-align: center;
+    }
+}

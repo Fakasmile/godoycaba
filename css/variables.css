@@ -1,0 +1,28 @@
+:root {
+    --green: #31763a;
+    --gray: #77777a;
+    --gray-light: #f5f1ed;
+
+    --header-height-desktop: 120px;
+    --header-height-mobile: 90px;
+    --padding-mobile: 2rem;
+    --padding-desktop: 10rem;
+
+    --hover-transition: 150ms ease-in-out-cubic;
+
+    --container: {
+        @media (--mobile) {
+            padding: calc(var(--padding-mobile) * 2) var(--padding-mobile);
+        }
+
+        @media (--desktop) {
+            padding: var(--padding-desktop) var(--padding-desktop);
+        }
+    }
+}
+
+@custom-media --mobile (width < 750px);
+@custom-media --desktop (width >= 750px);
+@custom-media --desktop-sm (750px <= width < 1200px);
+@custom-media --desktop-md (1200px <= width < 1600px);
+@custom-media --desktop-lg (width >= 1600px);

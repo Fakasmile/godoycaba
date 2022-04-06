@@ -1,0 +1,32 @@
+.home {
+    & .image-01 { background-image: url('../images/home-01.jpg'); }
+    & .image-02 { background-image: url('../images/home-02.jpg'); }
+    & .image-03 { background-image: url('../images/home-03.jpg'); }
+    & .image-04 { background-image: url('../images/home-04.jpg'); }
+
+    & .text {
+        @apply --container;
+
+        margin-bottom: 10rem;
+        font-family: 'FF Mark Pro', sans-serif;
+        font-weight: 400;
+        line-height: 1.2em;
+        letter-spacing: 0.1em;
+
+        @media (--mobile) { font-size: 1.6rem; }
+
+        @media (--desktop-sm) { font-size: 2.6rem; }
+
+        @media (--desktop-md) { font-size: 3.6rem; }
+
+        @media (--desktop-lg) { font-size: 3.6rem; }
+    }
+
+    & .tree {
+        margin-top: 4rem;
+        width: width('../images/tree-gray.svg');
+        height: height('../images/tree-gray.svg');
+        background: resolve('../images/tree-gray.svg') no-repeat center;
+        background-size: contain;
+    }
+}
