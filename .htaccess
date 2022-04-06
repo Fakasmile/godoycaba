@@ -1,0 +1,23 @@
+<FilesMatch "\.(admPanel|includes|info|install|contacto.php|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl|svn-base)$|^(code-style\.pl|Entries.*|Repository|Root|Tag|Template|all-wcprops|entries|format)$">
+  Order allow,deny
+</FilesMatch>
+Options -Indexes
+Options +FollowSymLinks
+ErrorDocument 404 /index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  RewriteRule sitemap.xml sitemap.php [nocase]
+  
+  # Rewrite URLs of the form 'x' to the form 'index.php?q=x'.
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+</IfModule>
+
+AddType font/ttf .ttf
+AddType font/eot .eot
+AddType font/otf .otf
+AddType font/woff .woff

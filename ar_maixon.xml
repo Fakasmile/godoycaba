@@ -1,0 +1,55 @@
+ <!DOCTYPE>
+<html>
+	<head>
+		<title>Adinco | Real Estate Solution</title>
+	</head>
+	<body>
+		<style type="text/css">
+    .error-box{
+        margin:         20% 0 0 0;
+        width:          auto;
+        text-align:     center;
+    }
+
+    .error-logo{
+        margin: 10px;
+    }
+
+    .error-message{
+        text-align:     center;
+        font-size:      14px;
+        color:          #666666;
+        padding:        10px;
+        font-family:    Arial,Helvetica,sans-serif;
+        margin-top:     10px;
+        margin-bottom:  10px;
+    }
+
+    .error-code{
+        text-align:     center;
+        font-size:      100px;
+        color:          #666666;
+        padding:        10px;
+        font-family:    Arial,Helvetica,sans-serif;
+    }
+
+    .error-link-action{
+        font-family:        Arial,Helvetica,sans-serif;
+        border-radius:      4px;
+        padding:            12px 12px 12px 12px;
+        text-decoration:    none;
+        color:              white;
+        /* Botón verde adinco */
+        background:         #468000;
+        /* Botón azul adinco */
+        /* background:         #085394; */
+        font-size:          14px;
+    }
+</style>
+<div class="error-box">
+	<img src="/img/logos/adinco_logo.png" class="error-logo" />
+	<div class="error-message">Error 404</div><br/>
+    <a href="/home/index" class="error-link-action">Volver al home</a>
+</div>
+	</body>
+</html>
